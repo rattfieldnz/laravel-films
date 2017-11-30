@@ -1,0 +1,62 @@
+storage/*
+vendor
+node_modules
+
+resources/assets/css/admin-lte
+resources/assets/css/bootstrap
+resources/assets/css/datatables
+resources/assets/css/font-awesome
+resources/assets/css/fonts
+resources/assets/css/iCheck
+resources/assets/css/ionicons
+resources/assets/css/select2
+resources/assets/css/jquery-ui
+resources/assets/css/cookieconsent
+resources/assets/css/datatables.net
+
+resources/assets/fonts
+
+resources/assets/img
+
+resources/assets/js/admin-lte
+resources/assets/js/blockadblock
+resources/assets/js/bootstrap
+resources/assets/js/datatables
+resources/assets/js/iCheck
+resources/assets/js/jquery
+resources/assets/js/jquery-ui
+resources/assets/js/select2
+resources/assets/js/cookieconsent
+resources/assets/js/datatables.net
+resources/assets/js/chart.js
+resources/assets/js/localforage
+resources/assets/js/js-cookie
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+bootstrap/cache/
+.env.*.php
+.env.php
+.env
+
+# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
+.rocketeer/
+
+_ide_helper.php
+.phpstorm.meta.php
+_ide_helper_models.php
+/.idea
+
+# PHP CS Fixer
+.php_cs.cache
+
+# Custom script for clearing caches
+/clearcompiledcache
+
+# Keep views from Laravel packages.
+!/resources/views/vendor/
+
+codealike.json
