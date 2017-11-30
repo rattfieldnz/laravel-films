@@ -22,6 +22,11 @@ class CreateCommentsTable extends Migration
                 ->references('id')
                 ->on('films')
                 ->onDelete('cascade');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -36,6 +41,7 @@ class CreateCommentsTable extends Migration
         Schema::disableForeignKeyConstraints();
         Schema::table('comments', function (Blueprint $table) {
             $table->dropForeign(['film_id']);
+            $table->dropForeign(['user_id']);
         });
         Schema::dropIfExists('comments');
         Schema::enableForeignKeyConstraints();
