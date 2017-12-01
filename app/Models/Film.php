@@ -56,6 +56,8 @@ class Film extends Model
         'slug' => 'string',
         'description' => 'string',
         'release_date' => 'date',
+        'rating' => 'integer',
+        'ticket_price' => 'decimal',
         'country' => 'string',
         'photo_url' => 'string'
     ];
@@ -66,7 +68,16 @@ class Film extends Model
      * @var array
      */
     public static $rules = [
-        
+        'name' => 'min:1|max:255|required|string|unique:films,name',
+        'description' => 'min:100|max:65535|required|string',
+        'release_date' => 'date|required',
+        'rating' => 'min:1|max:5|required|integer',
+        'ticket_price' => 'numeric|required',
+        'country' => 'min:4|max:255|string|required',
+        'photo_url' => [
+            'url',
+            'active_url',
+            'regex:~^https?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+\.(?:jpe?g|gif|png)$~'],
     ];
 
     /**

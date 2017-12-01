@@ -48,7 +48,7 @@ class Genre extends Model
      * @var array
      */
     public static $rules = [
-        
+        'name' => 'min:1|max:50|required|string|unique:genres,name',
     ];
 
     /**
