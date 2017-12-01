@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class CommentRepository
  * @package App\Repositories
- * @version November 30, 2017, 12:09 pm UTC
+ * @version December 1, 2017, 7:08 am UTC
  *
  * @method Comment findWithoutFail($id, $columns = ['*'])
  * @method Comment find($id, $columns = ['*'])
