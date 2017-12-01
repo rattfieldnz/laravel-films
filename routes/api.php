@@ -13,6 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+header('Access-Control-Allow-Origin: ' . env('APP_URL'));
+header('Access-Control-Allow-Credentials: true');
+
+Route::group(['prefix' => 'v1', 'namespace' => 'API'], function () {
+    Route::resource('films', 'FilmAPIController');
+
+    Route::resource('genres', 'GenreAPIController');
+
+    Route::resource('comments', 'CommentAPIController');
 });

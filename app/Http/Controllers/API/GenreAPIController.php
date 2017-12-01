@@ -26,6 +26,7 @@ class GenreAPIController extends AppBaseController
     public function __construct(GenreRepository $genreRepo)
     {
         $this->genreRepository = $genreRepo;
+        $this->middleware('create_fresh_api_token:api');
     }
 
     /**

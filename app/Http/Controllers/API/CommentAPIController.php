@@ -25,6 +25,7 @@ class CommentAPIController extends AppBaseController
     public function __construct(CommentRepository $commentRepo)
     {
         $this->commentRepository = $commentRepo;
+        $this->middleware('create_fresh_api_token:api');
     }
 
     /**

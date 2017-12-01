@@ -26,6 +26,7 @@ class FilmAPIController extends AppBaseController
     public function __construct(FilmRepository $filmRepo)
     {
         $this->filmRepository = $filmRepo;
+        $this->middleware('create_fresh_api_token:api');
     }
 
     /**
