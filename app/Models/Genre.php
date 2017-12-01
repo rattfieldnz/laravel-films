@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Genre extends Model
 {
-    use SoftDeletes, Sluggable;
+    use Sluggable;
 
     public $table = 'genres';
     
@@ -26,11 +26,9 @@ class Genre extends Model
     const UPDATED_AT = 'updated_at';
 
 
-    protected $dates = ['deleted_at'];
-
-
     public $fillable = [
-        'name'
+        'name',
+        'slug'
     ];
 
     /**
@@ -40,7 +38,8 @@ class Genre extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'name' => 'string'
+        'name' => 'string',
+        'slug' => 'string'
     ];
 
     /**
