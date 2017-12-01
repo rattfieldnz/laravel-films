@@ -54,7 +54,7 @@ class Comment extends Model
      * @var array
      */
     public static $rules = [
-        'name' => 'min:1|max:20|required|string',
+        'name' => 'min:1|max:30|required|string',
         'comment' => 'min:100|max:65535|required|string',
         'film_id' => 'integer|required|exists:films,id',
         'user_id' => 'integer|required|exists:users,id'
