@@ -3,6 +3,7 @@
 use App\Models\Comment;
 use App\Repositories\CommentRepository;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Tests\TestCase;
 
 class CommentRepositoryTest extends TestCase
 {
